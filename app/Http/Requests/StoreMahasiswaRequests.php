@@ -26,7 +26,7 @@ class StoreMahasiswaRequests extends FormRequest
         return [
             'Nim' => 'required|min:10',
             'Nama' => 'required',
-            'kelas' => 'required',
+            'kelas_id' => 'required',
             'Jurusan' => 'required',
             'No_Handphone' => 'required|min:11',
             'Email' => 'required',

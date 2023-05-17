@@ -43,7 +43,7 @@ class MahasiswaController extends Controller
                 'Nim'=>$request->Nim,
                 'Nama'=>$request->Nama,
                 'Foto'=>$request->Foto,
-                'kelas'=>$request->kelas,
+                'kelas_id'=>$request->kelas_id,
                 'Jurusan'=>$request->Jurusan,
                 'No_Handphone'=>$request->No_Handphone,
                 'Email'=>$request->Email,
@@ -86,7 +86,7 @@ class MahasiswaController extends Controller
             'Nim'=>$request->Nim,
             'Nama'=>$request->Nama,
             'Foto'=>$request->Foto,
-            'kelas'=>$request->kelas,
+            'kelas_id'=>$request->kelas_id,
             'Jurusan'=>$request->Jurusan,
             'No_Handphone'=>$request->No_Handphone,
             'Email'=>$request->Email,
@@ -101,8 +101,9 @@ class MahasiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Mahasiswa $mahasiswa)
     {
-        //
+        $mahasiswa->delete();
+        return response()->noContent();
     }
 }

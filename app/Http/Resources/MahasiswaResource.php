@@ -17,7 +17,7 @@ class MahasiswaResource extends JsonResource
         return [
             'Nim'=>$this->Nim,
             'Nama'=>$this->Nama,
-            'kelas'=>$this->kelas,
+            'kelas_id'=>$this->kelas_id,
             'Jurusan'=>$this->Jurusan,
             'No_Handphone'=>$this->No_Handphone,
             'Email'=>$this->Email,
